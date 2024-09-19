@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div class="custom-container">
+    <div class="container-fluid">
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">

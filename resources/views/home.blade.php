@@ -4,5 +4,8 @@
 @section('title', 'Página de inicio')
 
 @section('content')
-    <p>Sección del contenido</p>
+    <navbar></navbar>
+    <carousel></carousel>
+    <br>
+    <card-info></card-info>
 @endsection

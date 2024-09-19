@@ -24,6 +24,7 @@ Vue.component('navbar', require('./components/navbar.vue').default);
 Vue.component('card-info', require('./components/cardInfo.vue').default);
 Vue.component('carousel', require('./components/carousel.vue').default);
 Vue.component('table', require('./components/table.vue').default);
+Vue.component('html', require('./components/html.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
