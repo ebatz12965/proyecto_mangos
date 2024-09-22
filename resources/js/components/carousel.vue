@@ -3,32 +3,32 @@
 </script>
 
 <template>
-    <div class="container-fluid">
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="/imagen/imagen2.webp" class="d-block w-100" alt="...">
+                <img src="/imagen/img1.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="/imagen/imagen3.jpg" class="d-block w-100" alt="...">
+                <img src="/imagen/img2.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="/imagen/imagen2.webp" class="d-block w-100" alt="...">
+                <img src="/imagen/img3.jpg" class="d-block w-100" alt="...">
             </div>
         </div>
-    </div>
     </div>
 </template>
 
 <style scoped>
-.custom-container {
-    width: 100%;          /* Flexible a lo largo, toma todo el ancho disponible */
-    max-height: 300px;     /* Altura máxima del contenedor */
-           /* Ajusta la altura según el contenido */
-        /* Permitir scroll vertical si el contenido excede la altura máxima */
-    background-color: #f0f0f0;
-    padding: 20px;
-    box-sizing: border-box; /* Asegura que padding y borde no afecten el ancho */
+/* Establece la altura del contenedor para mostrar solo la mitad de la imagen */
+.carousel-inner {
+    height: 50vh; /* 50% de la altura de la ventana gráfica */
+    overflow: hidden; /* Oculta el contenido que se sale de esta altura */
 }
 
+/* Asegura que las imágenes mantengan su ancho y se centren */
+.carousel-item img {
+    object-fit: cover; /* Ajusta la imagen para que cubra todo el ancho */
+    height: 100%; /* Asegura que la imagen llene el contenedor */
+    width: 100%;
+}
 </style>

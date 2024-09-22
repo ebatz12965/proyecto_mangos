@@ -23,8 +23,11 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('navbar', require('./components/navbar.vue').default);
 Vue.component('card-info', require('./components/cardInfo.vue').default);
 Vue.component('carousel', require('./components/carousel.vue').default);
+Vue.component('carousel2', require('./components/carousel2.vue').default);
 Vue.component('table', require('./components/table.vue').default);
 Vue.component('html', require('./components/html.vue').default);
+Vue.component('form-1', require('./components/form1.vue').default);
+Vue.component('imagens', require('./components/imagens.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

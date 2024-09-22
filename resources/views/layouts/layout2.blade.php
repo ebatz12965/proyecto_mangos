@@ -124,12 +124,12 @@
 
 <!-- texto -->
 <br>
-<container>
+<div class="container">
 <h1 class="text-center">Bienvenidos a AgroFruit, S.A.</h1>
     <p class="text-center">Somos una empresa líder, especializada en la producción, empaque y exportación de mango con la disposición de
         <br>ofrecer en Guatemala y al resto del Mundo nuestras variedades de Mango de la más alta calidad, cumpliendo los
         <br>requisitos de sanidad y calidad que nuestros clientes y consumidores necesitan</p>
-</container>
+</div>
 
 <!-- imagenes -->
 <br>

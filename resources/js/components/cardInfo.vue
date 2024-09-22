@@ -6,7 +6,7 @@
     <div class="card" style="width: 100%; background-color: #6DB744; color: white;">
         <div class="row g-0">
             <div class="col-md-4">
-                <img src="https://via.placeholder.com/150" class="img-fluid rounded-start" alt="Mangos">
+                <img src="/imagen/logo2.webp" class="img-fluid rounded-start img" alt="Mangos">
             </div>
             <div class="col-md-8">
                 <div class="card-body">
@@ -27,4 +27,11 @@ body, html {
     height: 100%;
     margin: 0;
 }
+
+img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Ajusta la imagen dentro del cuadro sin distorsionarla */
+}
+
 </style>
