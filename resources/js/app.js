@@ -8,6 +8,12 @@ require('./bootstrap');
 
 window.Vue = require('vue').default;
 
+window.routes = {
+    pedidoStore: "{{ route('pedido.store') }}"
+};
+
+
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -20,14 +26,16 @@ window.Vue = require('vue').default;
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
-Vue.component('navbar', require('./components/navbar.vue').default);
-Vue.component('card-info', require('./components/cardInfo.vue').default);
-Vue.component('carousel', require('./components/carousel.vue').default);
-Vue.component('carousel2', require('./components/carousel2.vue').default);
-Vue.component('table', require('./components/table.vue').default);
-Vue.component('html', require('./components/html.vue').default);
+Vue.component('encabezado1', require('./components/encabezado1.vue').default);
+Vue.component('pie-pagina', require('./components/pie-pagina.vue').default);
+Vue.component('carrusel-img', require('./components/carrusel-img.vue').default);
+Vue.component('carrusel-img2', require('./components/carrusel-img2.vue').default);
+Vue.component('table1', require('./components/table1.vue').default);
+Vue.component('table2', require('./components/table2.vue').default);
 Vue.component('form-1', require('./components/form1.vue').default);
 Vue.component('imagens', require('./components/imagens.vue').default);
+Vue.component('modal1', require('./components/modal1.vue').default);
+Vue.component('modal2', require('./components/modal2.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -37,4 +45,5 @@ Vue.component('imagens', require('./components/imagens.vue').default);
 
 const app = new Vue({
     el: '#app',
+
 });

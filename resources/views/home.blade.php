@@ -4,10 +4,11 @@
 @section('title')
 
 @section('content')
-    <navbar></navbar>
-    <carousel></carousel>
+    <encabezado1></encabezado1>
+    <carrusel-img></carrusel-img>
     <br>
     <div class="container">
+
         <h1 class="text-center">Bienvenidos a La Huerta del Mango, S.A.</h1>
         <p class="text-center">Somos una empresa líder, especializada en la producción, empaque y exportación de mango con la disposición de
             <br>ofrecer en Guatemala y al resto del Mundo nuestras variedades de Mango de la más alta calidad, cumpliendo los
@@ -15,7 +16,7 @@
     </div>
     <imagens></imagens>
     <br>
-    <carousel2></carousel2>
+    <carrusel-img2></carrusel-img2>
     <br>
-    <card-info></card-info>
+    <pie-pagina></pie-pagina>
 @endsection

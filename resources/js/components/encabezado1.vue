@@ -18,10 +18,16 @@
                         <a class="nav-link" href="#">Nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Mango</a>
+                        <a class="nav-link" href="/mangos">Mangos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Procesos</a>
+                        <a class="nav-link" href="/pedido">Pedidos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/prueba">Prueba</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/process">Procesos</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/contact">Contacto</a>
