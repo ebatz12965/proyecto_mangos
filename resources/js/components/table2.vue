@@ -1,34 +1,26 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import axios from 'axios';
-import modal3 from './modal3.vue';
+import Modal3 from './modal3.vue'; //importar modal3
 
-
-const pruebas = ref([]); // Arreglo para almacenar los datos de la tabla
+// Arreglo para almacenar los datos de la tabla
+const pruebas = ref([]);
+const showModal = ref(false);
+const id_pedido = ref(null);
 
 // Función para obtener los datos
 const fetchPruebas = async () => {
     try {
-        const response = await axios.get('/ruta-para-mostrar-pedido'); // Asegúrate de que la URL sea correcta
-        pruebas.value = response.data; // Asigna los datos obtenidos al arreglo
+        const response = await axios.get('/ruta-para-mostrar-pedido');
+        pruebas.value = response.data; // Asignación de los datos obtenidos al arreglo
     } catch (error) {
         console.error("Error al obtener datos:", error);
     }
 };
 
-onMounted(() => {
-    fetchPruebas();
-});
-
-const editPrueba = (id) => {
-    // Lógica para editar la prueba
-    console.log('Edit prueba with ID:', id);
-};
-
 const deletePrueba = async (id) => {
     // Lógica para eliminar la prueba
     try {
-        // Reemplaza la URL con la sintaxis correcta
         await axios.delete(`/pruebas/${id}`); // Usa `${id}` en lugar de `{id}`
         fetchPruebas(); // Actualiza la lista después de eliminar
     } catch (error) {
@@ -36,25 +28,18 @@ const deletePrueba = async (id) => {
     }
 };
 
+
+
+// Método para abrir el modal de edición
 const openEditModal = async (id) => {
-    // Aquí llamas a la función que obtiene los detalles del pedido
-    await obtenerDetallesPedido(id)
-    showModal.value = true // Abre el modal
-}
-
-// Aquí debes incluir la función obtenerDetallesPedido
-const obtenerDetallesPedido = async (id) => {
-    try {
-        const response = await axios.get(`/pruebas/${id}`)
-        nombre_pedido.value = response.data.nombrePrueba
-        id_pedido.value = id
-    } catch (error) {
-        alert('Error al obtener los detalles del pedido')
-        console.error(error)
-    }
-}
+    id_pedido.value = id; // Pasar el ID al modal
+    showModal.value = true; // Mostrar el modal
+};
 
 
+const toggleModal = () => {
+    showModal.value = !showModal.value; // Alterna la visibilidad del modal
+};
 
 // Obtener datos al montar el componente
 onMounted(fetchPruebas);
@@ -69,6 +54,7 @@ onMounted(fetchPruebas);
                 <th scope="col">Nombre de la Prueba</th>
                 <th scope="col">Fecha de Creación</th>
                 <th scope="col">Fecha de Actualización</th>
+                <th scope="col">Acciones</th>
             </tr>
             </thead>
             <tbody>
@@ -84,10 +70,12 @@ onMounted(fetchPruebas);
             </tr>
             </tbody>
         </table>
-        <Modal3 v-if="showModal" @close="showModal = false" />
+
+        <!-- Modal para editar -->
+        <modal3 v-if="showModal" :id_pedido="id_pedido" :toggleModal="toggleModal" :showModal="showModal" />
     </div>
 </template>
 
 <style scoped>
-/* Agrega estilos personalizados aquí si es necesario */
+
 </style>

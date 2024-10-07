@@ -55,16 +55,16 @@ const toggleModal = () => {
             </div>
         </div>
 
-        <!-- Asegúrate de que se muestre el modal al hacer clic -->
+        <!-- Para mostrar el modal al hacer click -->
         <div v-if="modalVisible" class="modal-backdrop fade show"></div>
     </div>
 </template>
 
 <style scoped>
 .modal {
-    display: none; /* Inicialmente oculta */
+    display: none;
 }
 .show {
-    display: block; /* Muestra cuando está activo */
+    display: block;
 }
 </style>
