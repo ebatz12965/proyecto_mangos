@@ -1,5 +1,28 @@
 <script setup>
+import { ref } from 'vue'
+import axios from 'axios'
 
+const enviarMensaje = async () => {
+    try {
+        const response = await axios.post('/ruta-para-guardar-pedido', {
+            nombre: nombre.value
+            email: email.value
+            empresa: empresa.value
+            asunto: asunto.value
+            mensaje: mensaje.value
+        })
+        alert('Mensaje enviado correctamente')
+
+        nombre.value = ''; // Limpia el campo de entrada
+        email.value = '';
+        empresa.value = '';
+        asunto.value = '';
+        mensaje.value = '';
+    } catch (error) {
+        alert('Hubo un error al enviar el mensaje')
+        console.error(error)
+    }
+}
 </script>
 
 <template>
@@ -19,26 +42,26 @@
             </td>
             <!-- Columna central más ancha -->
             <td style="width: 60%;">
-                <form >
+                <form @submit.prevent="enviarMensaje">
                     <div class="mb-3 align-content-center">
-                        <label for="exampleFormControlInput1" class="form-label">Su nombre (requerido)</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ejemplo: Juan Carlos López">
+                        <label for="nombre" class="form-label">Su nombre (requerido)</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Ejemplo: Juan Carlos López">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Su e-mail (requerido)</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="juan.lopez@example.com">
+                        <label for="email" class="form-label">Su e-mail (requerido)</label>
+                        <input type="email" class="form-control" id="email" placeholder="juan.lopez@example.com">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Empresa</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Empresa, S.A.">
+                        <label for="empresa" class="form-label">Empresa</label>
+                        <input type="text" class="form-control" id="empresa" placeholder="Empresa, S.A.">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Su nombre (requerido)</label>
-                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder=" ">
+                        <label for="asunto" class="form-label">Asunto (requerido)</label>
+                        <input type="text" class="form-control" id="asunto" placeholder=" ">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label">Su mensaje</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <label for="mensaje" class="form-label">Su mensaje</label>
+                        <textarea class="form-control" id="mensaje" rows="3"></textarea>
                     </div>
                 </form>
             </td>
