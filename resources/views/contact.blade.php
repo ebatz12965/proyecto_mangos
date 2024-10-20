@@ -8,7 +8,7 @@
         <br>
         <h1 class="text-center">Contacto</h1>
         <br>
-        <form-1></form-1>
+        <form1></form1>
         <br>
         <pie-pagina></pie-pagina>
     @endsection

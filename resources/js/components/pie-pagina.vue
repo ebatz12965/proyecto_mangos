@@ -10,7 +10,7 @@
             </div>
             <div class="col-md-8">
                 <div class="card-body">
-                    <h5 class="card-title">AgroFruit Izabal, S.A. ©2024</h5>
+                    <h5 class="card-title">La Huerta del Mango, S.A. ©2024</h5>
                     <p class="card-text">
                         4a. Avenida, entre 12a y 13a Calle, Puerto Barrios, Izabal<br>
                         Tel: (+502) 4071-8171<br>

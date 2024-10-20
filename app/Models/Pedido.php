@@ -9,6 +9,9 @@ class Pedido extends Model
 {
     use HasFactory;
 
+    // Especifica el nombre de la tabla
+    protected $table = 'pedido';
+
     protected $fillable = [
         'nombre_pedido',
         'email_pedido',

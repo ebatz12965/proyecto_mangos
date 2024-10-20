@@ -7,6 +7,15 @@ use App\Models\Pedido;
 
 class PedidoController extends Controller
 {
+    public function index()
+    {
+        // Obtener todos los pedidos
+        $pedido = Pedido::all();
+
+        // Retornar los pedidos como respuesta JSON
+        return response()->json($pedido);
+    }
+
     // Método para mostrar el formulario
     public function create()
     {

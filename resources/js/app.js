@@ -32,10 +32,11 @@ Vue.component('carrusel-img', require('./components/carrusel-img.vue').default);
 Vue.component('carrusel-img2', require('./components/carrusel-img2.vue').default);
 Vue.component('table1', require('./components/table1.vue').default);
 Vue.component('table2', require('./components/table2.vue').default);
-Vue.component('form-1', require('./components/form1.vue').default);
+Vue.component('form1', require('./components/form1.vue').default);
 Vue.component('imagens', require('./components/imagens.vue').default);
 Vue.component('modal1', require('./components/modal1.vue').default);
 Vue.component('modal2', require('./components/modal2.vue').default);
+Vue.component('mangos-img', require('./components/mangos-img.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

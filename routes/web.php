@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PedidoController;
+use App\Http\Controllers\PruebaController;
+use App\Http\Controllers\ContactoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,17 +32,19 @@ Route::get('/process', function () {return view('/process');});
 
 Route::get('/prueba', function () {return view('/pedido/prueba');});
 
+Route::get('/ruta-mostrar-pedidos', [PedidoController::class, 'index']);
 Route::get('/pedido', [PedidoController::class, 'create'])->name('pedido.create');
-
+Route::post('/pedido', [PedidoController::class, 'store'])->name('pedido.store');
 
 
 Route::post('/prueba', [\App\Http\Controllers\PruebaController::class, 'prueba'])->name('prueba');
 
 
-Route::post('/ruta-para-guardar-pedido', [\App\Http\Controllers\PruebaController::class, 'store']);
-Route::get('/ruta-para-mostrar-pedido', [\App\Http\Controllers\PruebaController::class, 'index']);
-Route::get('/pruebas/{id}/edit', [\App\Http\Controllers\PruebaController::class, 'edit']);
-Route::put('/pruebas/{id}', [\App\Http\Controllers\PruebaController::class, 'update']);
-Route::delete('/pruebas/{id}', [\App\Http\Controllers\PruebaController::class, 'destroy']);
-Route::get('/pruebas/{id}', [\App\Http\Controllers\PruebaController::class, 'show']);
+Route::post('/ruta-para-guardar-pedido', [PruebaController::class, 'store']);
+Route::get('/ruta-para-mostrar-pedido', [PruebaController::class, 'index']);
+Route::get('/pruebas/{id}/edit', [PruebaController::class, 'edit']);
+Route::put('/pruebas/{id}', [PruebaController::class, 'update']);
+Route::delete('/pruebas/{id}', [PruebaController::class, 'destroy']);
+Route::get('/pruebas/{id}', [PruebaController::class, 'show']);
 
+Route::post('/guardar-contacto', [ContactoController::class, 'store']);
