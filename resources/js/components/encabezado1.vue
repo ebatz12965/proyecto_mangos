@@ -27,10 +27,13 @@
                         <a class="nav-link" href="/prueba">Prueba</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/process">Procesos</a>
+                        <a class="nav-link" href="/contact">Contacto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/contact">Contacto</a>
+                        <a class="nav-link" href="/usuarios">Usuarios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/prueba-api">Prueba API</a>
                     </li>
                 </ul>
             </div>

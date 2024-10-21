@@ -37,6 +37,10 @@ Vue.component('imagens', require('./components/imagens.vue').default);
 Vue.component('modal1', require('./components/modal1.vue').default);
 Vue.component('modal2', require('./components/modal2.vue').default);
 Vue.component('mangos-img', require('./components/mangos-img.vue').default);
+Vue.component('create-user', require('./components/create-user.vue').default);
+Vue.component('table-user', require('./components/table-user.vue').default);
+Vue.component('prueba-api', require('./components/prueba-api.vue').default);
+Vue.component('inicio-sesion', require('./components/inicio-sesion.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
