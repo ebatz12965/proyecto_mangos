@@ -21,14 +21,14 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::middleware('auth:sanctum')->get('/pedidos', [PedidoController::class, 'index']);
+Route::middleware('auth:sanctum')->get('/pedidos', [PedidoController::class, 'index'])->name('pedidos');
 
 
 
 Route::get('/pruebas', [PruebaController::class, 'index']);
 
 
-Route::get('/pedidos', [PedidoController::class, 'index']);
+//Route::get('/pedidos', [PedidoController::class, 'index'])->name('pedidos');
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);

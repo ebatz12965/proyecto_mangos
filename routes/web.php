@@ -38,7 +38,7 @@ Route::get('/login', [AuthController::class, 'create'])->name('login');
 
 
 
-    Route::get('/ruta-mostrar-pedidos', [PedidoController::class, 'index'])->name('pedidos');
+    //Route::get('/ruta-mostrar-pedidos', [PedidoController::class, 'index'])->name('pedidos');
     Route::get('/pedido', [PedidoController::class, 'create'])->name('pedido.create');
     Route::post('/pedido', [PedidoController::class, 'store'])->name('pedido.store');
 
