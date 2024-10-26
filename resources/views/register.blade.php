@@ -37,8 +37,11 @@
             </div>
 
             <div class="d-flex justify-content-center mt-3">
+                <a href="{{ route('login') }}" class="btn btn-outline-custom me-3">
+                    <i class="fas fa-sign-in-alt"></i> Regresar
+                </a>
                 <button type="submit" class="btn btn-outline-custom">
-                    Registrar
+                    <i class="fas fa-user-plus"></i> Registrar
                 </button>
             </div>
         </form>
@@ -50,13 +53,13 @@
 
 <style scoped>
     .register-form {
-        background-color: #f8f9fa; /* Color de fondo suave */
-        padding: 20px; /* Espaciado interno */
-        border-radius: 5px; /* Bordes redondeados */
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
 
     .error {
-        font-size: 0.875rem; /* Tamaño de fuente más pequeño para los errores */
+        font-size: 0.875rem;
     }
 </style>
