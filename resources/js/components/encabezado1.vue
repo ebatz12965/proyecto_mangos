@@ -15,9 +15,6 @@
                         <a class="nav-link" href="/">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Nosotros</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="/mangos">Mangos</a>
                     </li>
                     <li class="nav-item">
@@ -27,8 +24,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/contact">Contacto</a>
                     </li>
-
-
+                    <li class="nav-item">
+                        <a class="nav-link" href="/apis">APIs</a>
+                    </li>
                 </ul>
 
                 <a href="/login" class="btn btn-outline-custom">

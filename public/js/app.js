@@ -4571,13 +4571,6 @@ var staticRenderFns = [function () {
   }, [_c("a", {
     staticClass: "nav-link",
     attrs: {
-      href: "#"
-    }
-  }, [_vm._v("Nosotros")])]), _vm._v(" "), _c("li", {
-    staticClass: "nav-item"
-  }, [_c("a", {
-    staticClass: "nav-link",
-    attrs: {
       href: "/mangos"
     }
   }, [_vm._v("Mangos")])]), _vm._v(" "), _c("li", {
@@ -4594,7 +4587,14 @@ var staticRenderFns = [function () {
     attrs: {
       href: "/contact"
     }
-  }, [_vm._v("Contacto")])])]), _vm._v(" "), _c("a", {
+  }, [_vm._v("Contacto")])]), _vm._v(" "), _c("li", {
+    staticClass: "nav-item"
+  }, [_c("a", {
+    staticClass: "nav-link",
+    attrs: {
+      href: "/apis"
+    }
+  }, [_vm._v("APIs")])])]), _vm._v(" "), _c("a", {
     staticClass: "btn btn-outline-custom",
     attrs: {
       href: "/login"
