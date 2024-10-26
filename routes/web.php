@@ -30,6 +30,10 @@ Route::get('/prueba', function () {return view('/layouts/layout2');});
 
 Route::get('/mangos', function () {return view('/mangos');});
 
+Route::get('/apis', function () {return view('/consumo-apis');});
+
+Route::get('/token', function () {return view('/token');});
+
 
 
 Route::get('/login', [AuthController::class, 'create'])->name('login');
@@ -61,6 +65,9 @@ Route::view('/login', 'login')->name('login.view');
 Route::get('/register', function () {return view('register');})->name('register');
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/login', [AuthController::class, 'login'])->name('login');
+Route::post('/generate-token', [AuthController::class, 'generateToken'])->name('generate-token');
+
+
 
 
 

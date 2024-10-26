@@ -53,6 +53,30 @@ class AuthController extends Controller
         ]);*/
     }
 
+    public function generateToken(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required|string'
+        ]);
+
+        $user = User::where('email', $request->email)->first();
+
+        if (!$user) {
+            return response()->json(['message' => 'Usuario no encontrado'], 404);
+        }
+
+        if (!Hash::check($request->password, $user->password)) {
+            return response()->json(['message' => 'Contraseña incorrecta'], 401);
+        }
+
+        // Generar el token con Sanctum
+        $token = $user->createToken('user-token')->plainTextToken;
+
+        return response()->json(['token' => $token], 200);
+    }
+
+
     public function infouser(Request $request)
     {
         return $request->user();

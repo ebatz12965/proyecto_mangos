@@ -20,8 +20,9 @@
 
         <div class="text-center">
             <img src="/imagen/img6.webp" class="rounded custom-image" alt="...">
-            <p class="mt-2 custom-text">Aguacate Hass</p>
-            <p class="mt-0">Contamos con producción de aguacate tipo HASS</p>
+            <p class="mt-2 custom-text">Mejoramiento de la calidad</p>
+            <p class="mt-0">Integración de controles y monitoreos <br>
+                de calidad.</p>
         </div>
     </div>
 </template>

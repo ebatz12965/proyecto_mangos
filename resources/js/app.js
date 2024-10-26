@@ -41,6 +41,7 @@ Vue.component('create-user', require('./components/create-user.vue').default);
 Vue.component('table-user', require('./components/table-user.vue').default);
 Vue.component('prueba-api', require('./components/prueba-api.vue').default);
 Vue.component('inicio-sesion', require('./components/inicio-sesion.vue').default);
+Vue.component('api-neko', require('./components/api-neko.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

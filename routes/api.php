@@ -33,3 +33,5 @@ Route::get('/pruebas', [PruebaController::class, 'index']);
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/userinfo', [AuthController::class, 'infouser'])->middleware('auth:sanctum');
+
+//Route::post('/token', [AuthController::class, 'generateToken']);

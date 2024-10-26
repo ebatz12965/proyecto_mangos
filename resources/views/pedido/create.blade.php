@@ -9,5 +9,6 @@
         <modal1></modal1>
         <br>
         <table1></table1>
+
         <pie-pagina></pie-pagina>
     @endsection

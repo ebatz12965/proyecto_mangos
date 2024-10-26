@@ -33,12 +33,44 @@
                 <a href="{{ route('register') }}" class="btn btn-outline-custom">
                     <i class="fas fa-user-plus"></i> Registrar
                 </a>
+                <button type="button" onclick="getToken()" class="btn btn-outline-custom">
+                    <i class="fas fa-key"></i> Token
+                </button>
             </div>
+
         </form>
 
         <br>
         <pie-pagina></pie-pagina>
     @endsection
+    <script>
+        async function getToken() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const response = await fetch("{{ route('generate-token') }}", {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                    },
+                    body: JSON.stringify({ email, password })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    alert(`Tu token es: ${data.token}`);
+                } else {
+                    alert(data.message || 'Error al generar el token');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Ocurrió un error al solicitar el token');
+            }
+        }
+    </script>
 
     <style scoped>
         .btn-outline-custom {
