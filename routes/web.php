@@ -30,15 +30,13 @@ Route::get('/prueba', function () {return view('/layouts/layout2');});
 
 Route::get('/mangos', function () {return view('/mangos');});
 
-Route::get('/process', function () {return view('/process');});
 
-Route::get('/prueba', function () {return view('/pedido/prueba');});
 
 Route::get('/login', [AuthController::class, 'create'])->name('login');
 
 
 
-    //Route::get('/ruta-mostrar-pedidos', [PedidoController::class, 'index'])->name('pedidos');
+    Route::get('/ruta-mostrar-pedidos', [PedidoController::class, 'index'])->name('pedidos1');
     Route::get('/pedido', [PedidoController::class, 'create'])->name('pedido.create');
     Route::post('/pedido', [PedidoController::class, 'store'])->name('pedido.store');
 
@@ -56,20 +54,13 @@ Route::get('/login', [AuthController::class, 'create'])->name('login');
     Route::post('/guardar-contacto', [ContactoController::class, 'store']);
 
 
-// Ruta para mostrar la vista
-    Route::get('/usuarios', [UsuarioController::class, 'create'])->name('usuario.create');
 
-// Ruta para crear un nuevo usuario
-    Route::post('/usuarios', [UsuarioController::class, 'store'])->name('usuario.store');
-
-// Ruta para obtener la lista de usuarios en formato JSON
-    Route::get('/api/usuarios', [UsuarioController::class, 'index'])->name('usuario.index');
-
-Route::view('/prueba-api', 'prueba-api')->name('prueba-api');
-
-
-Route::view('/register', 'auth.register')->name('register.view');
+//Route::view('/register', 'auth.register')->name('register.view');
 Route::view('/login', 'login')->name('login.view');
 
+Route::get('/register', function () {return view('register');})->name('register');
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 Route::post('/login', [AuthController::class, 'login'])->name('login');
+
+
+

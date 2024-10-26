@@ -10,7 +10,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav me-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="/">Inicio</a>
                     </li>
@@ -23,19 +23,16 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/pedido">Pedidos</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/prueba">Prueba</a>
-                    </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="/contact">Contacto</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/usuarios">Usuarios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/prueba-api">Prueba API</a>
-                    </li>
+
+
                 </ul>
+                <a href="/login" class="btn btn-outline-custom">
+                    <i class="fas fa-sign-in-alt"></i> Iniciar Sesión
+                </a>
             </div>
         </div>
     </nav>
@@ -46,5 +43,15 @@ img {
     width: 50px;
     height: 50px;
     object-fit: cover; /* Ajusta la imagen dentro del cuadro sin distorsionarla */
+}
+
+.btn-outline-custom {
+    border-color: #6DB744; /* Color del borde verde */
+    color: #6DB744; /* Color del texto verde */
+}
+
+.btn-outline-custom:hover {
+    background-color: #6DB744; /* Fondo verde al pasar el ratón */
+    color: white; /* Color de texto blanco al pasar el ratón */
 }
 </style>

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Usuario;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -11,7 +11,7 @@ class UsuarioController extends Controller
     // Método para listar usuarios
     public function index()
     {
-        return response()->json(Usuario::all());
+        return response()->json(User::all());
     }
 
     public function create()
@@ -33,7 +33,7 @@ class UsuarioController extends Controller
             return response()->json(['errors' => $validator->errors()], 422);
         }
 
-        $usuario = Usuario::create($request->all());
-        return response()->json($usuario, 201);
+        $user = User::create($request->all());
+        return response()->json($user, 201);
     }
 }

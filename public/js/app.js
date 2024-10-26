@@ -4448,7 +4448,7 @@ var staticRenderFns = [function () {
       id: "navbarNav"
     }
   }, [_c("ul", {
-    staticClass: "navbar-nav"
+    staticClass: "navbar-nav me-auto"
   }, [_c("li", {
     staticClass: "nav-item"
   }, [_c("a", {
@@ -4482,30 +4482,16 @@ var staticRenderFns = [function () {
   }, [_c("a", {
     staticClass: "nav-link",
     attrs: {
-      href: "/prueba"
-    }
-  }, [_vm._v("Prueba")])]), _vm._v(" "), _c("li", {
-    staticClass: "nav-item"
-  }, [_c("a", {
-    staticClass: "nav-link",
-    attrs: {
       href: "/contact"
     }
-  }, [_vm._v("Contacto")])]), _vm._v(" "), _c("li", {
-    staticClass: "nav-item"
-  }, [_c("a", {
-    staticClass: "nav-link",
+  }, [_vm._v("Contacto")])])]), _vm._v(" "), _c("a", {
+    staticClass: "btn btn-outline-custom",
     attrs: {
-      href: "/usuarios"
+      href: "/login"
     }
-  }, [_vm._v("Usuarios")])]), _vm._v(" "), _c("li", {
-    staticClass: "nav-item"
-  }, [_c("a", {
-    staticClass: "nav-link",
-    attrs: {
-      href: "/prueba-api"
-    }
-  }, [_vm._v("Prueba API")])])])])])]);
+  }, [_c("i", {
+    staticClass: "fas fa-sign-in-alt"
+  }), _vm._v(" Iniciar Sesión\n            ")])])])]);
 }];
 render._withStripped = true;
 
@@ -12526,7 +12512,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_laravel_mix_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\nimg[data-v-c4ecf40c] {\n    width: 50px;\n    height: 50px;\n    -o-object-fit: cover;\n       object-fit: cover; /* Ajusta la imagen dentro del cuadro sin distorsionarla */\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\nimg[data-v-c4ecf40c] {\n    width: 50px;\n    height: 50px;\n    -o-object-fit: cover;\n       object-fit: cover; /* Ajusta la imagen dentro del cuadro sin distorsionarla */\n}\n.btn-outline-custom[data-v-c4ecf40c] {\n    border-color: #6DB744; /* Color del borde verde */\n    color: #6DB744; /* Color del texto verde */\n}\n.btn-outline-custom[data-v-c4ecf40c]:hover {\n    background-color: #6DB744; /* Fondo verde al pasar el ratón */\n    color: white; /* Color de texto blanco al pasar el ratón */\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
